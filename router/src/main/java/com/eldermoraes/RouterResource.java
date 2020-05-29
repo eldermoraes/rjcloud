@@ -10,7 +10,7 @@ import javax.ws.rs.core.Response;
 import org.eclipse.microprofile.metrics.annotation.Timed;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
-@Path("/")
+@Path("/router")
 public class RouterResource {
 
     @Inject
@@ -20,8 +20,7 @@ public class RouterResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     @Timed
-    @Path("/time")
     public Response hello() {
-        return Response.ok(timeService.getTime()).build();
+        return Response.ok("router => " + timeService.getTime()).build();
     }
 }
