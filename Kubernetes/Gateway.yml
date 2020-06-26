@@ -3,7 +3,7 @@ kind: Gateway
 metadata:
   generation: 1
   name: java-cloud-native-gateway
-  namespace: java-cloud-native
+  namespace: tutorial
 spec:
   selector:
     istio: ingressgateway
